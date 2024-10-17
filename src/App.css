@@ -1,0 +1,138 @@
+:root {
+  --Sidebar_width: 18.75rem;
+}
+
+body {
+  overflow: hidden;
+}
+
+h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Poppins";
+}
+
+.Sidebar {
+  padding: 2% 1%;
+  border-right: 1px solid #DADCE0;
+  min-width: calc(var(--Sidebar_width) - 2%);
+}
+
+.Calendar table {
+  width: 100%;
+}
+
+.Calendar tr:first-child th {
+  font-weight: 200;
+}
+
+.Calendar td {
+  text-align: center;
+}
+
+.Calendar button {
+  background-color: white;
+  border: 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition-duration: 0.5s;
+  line-height: 1.5rem;
+}
+
+.Calendar button:hover {
+  cursor: pointer;
+}
+
+.Calendar .active {
+  background-color: rgb(115, 99, 255);
+  color: white;
+  border-radius: 50%;
+}
+
+.Main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.MainHeader .common_container {
+  padding: 2% 2%;
+  border-bottom: 1px solid #DADCE0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.MainHeader .common_container h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.AddTaskButton {
+  display: inline-flex;
+  align-items: center;
+}
+
+.AddTaskButton button {
+  width: 8rem;
+  height: 2.75rem;
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: rgb(115, 99, 255);
+  border: 0;
+  border-radius: 0.3rem;
+  transition-duration: 0.5s;
+}
+
+.AddTaskButton button:hover {
+  width: 8rem;
+  height: 2.75rem;
+  color: white;
+  background-color: #0cb2ff;
+  cursor: pointer;
+}
+
+.Timetable {
+  display: flex;
+  flex-direction: column;
+}
+
+.Timetable .graph_container {
+  margin: 2rem 0 0 0;
+  width: calc(100vw - var(--Sidebar_width));
+}
+
+.Timetable .graph_container h1 {
+  margin-left: 2%;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.Timetable .graph {
+  height: 7.5rem;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-left: 0;
+  border-right: 0;
+  border-color: #DADCE0;
+  border-style: solid;
+  
+}
+
+.graph {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.graph div {
+  min-height: 100%;
+  width: 500px;
+  flex: 1 0 auto;
+}
