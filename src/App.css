@@ -122,17 +122,17 @@ h1 {
   border-right: 0;
   border-color: #DADCE0;
   border-style: solid;
-  
-}
-
-.graph {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
 }
 
-.graph div {
+.Timetable .graph_content {
+  min-width: 90rem;
+  min-width: 90rem;
+}
+
+.Timetable .graph_content div {
   min-height: 100%;
-  width: 500px;
   flex: 1 0 auto;
 }
