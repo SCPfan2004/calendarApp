@@ -60,10 +60,14 @@ function objectMap(obj, func, ...args) {
     return new_object;
 }
 
-function time_converter(time, string_to_int = true) {
+export function time_converter(time, string_to_int = true) {
     let converted_time = 0;
 
     if(string_to_int) {
+        if(typeof time !== "string") {
+            return NaN;
+        }
+
         const colon_position = time.indexOf(":");
 
         const hours = parseInt(time.slice(0, colon_position));
@@ -72,10 +76,14 @@ function time_converter(time, string_to_int = true) {
         converted_time = hours * 60 + minutes;
 
     } else {
+        if(typeof time !== "number") {
+            return NaN;
+        }
+
         let hours = 0;
         let minutes = 0;
 
-        while(time > 60) {
+        while(time >= 60) {
             hours += 1;
             time -= 60;    
         }

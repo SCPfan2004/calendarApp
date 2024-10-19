@@ -11,12 +11,12 @@ export const tasks = {
         end: "16:00",
     },
 
-    Task4: {
+    Task3: {
         start: "18:10",
         end: "18:20",
     },
 
-    Task5: {
+    Task4: {
         start: "19:00",
         end: "20:00",
     },

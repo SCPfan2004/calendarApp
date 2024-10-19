@@ -31,7 +31,7 @@ function Calendar({currentDay, handleClick}) {
                                     return (
                                         <td key={day}>
                                             {day === currentDay
-                                            ? <button onClick={() => handleClick(day)} className="active">{day}</button>
+                                            ? <button className="active">{day}</button>
                                             : <button onClick={() => handleClick(day)}>{day}</button>}
                                         </td>
                                     );
