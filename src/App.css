@@ -175,3 +175,22 @@ h1, h2, h3, h4, h5, h6 {
 .Timetable .event_info span {
   font-size: 1.1rem
 }
+
+@media(max-width: 62.5rem) {
+  body {
+    overflow: visible;
+  }
+
+  .App {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .Sidebar {
+    min-width: 0;
+  }
+
+  .Timetable .graph_container {
+    width: 100%;
+  }
+}
