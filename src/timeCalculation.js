@@ -48,7 +48,7 @@ function objectMap(obj, func, ...args) {
     const new_object = {};
 
     Object.keys(obj).forEach((key) => {
-        const isObject = typeof obj[key] === "object";
+        const isObject = obj && typeof obj[key] === "object";
 
         if (isObject) {
             new_object[key] = objectMap(obj[key], func, args[0]);
